@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris - Realistic UI Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="star" style="top: 10%; left: 15%;"></div>
+    <div class="star" style="top: 20%; left: 80%;"></div>
+    <div class="star" style="top: 30%; left: 25%;"></div>
+    <div class="star" style="top: 40%; left: 60%;"></div>
+    <div class="star" style="top: 50%; left: 40%;"></div>
+    <div class="star" style="top: 60%; left: 70%;"></div>
+    <div class="star" style="top: 70%; left: 30%;"></div>
+    <div class="star" style="top: 80%; left: 85%;"></div>
+    <div class="star" style="top: 15%; left: 45%;"></div>
+    <div class="star" style="top: 25%; left: 65%;"></div>
+    <div class="star" style="top: 35%; left: 15%;"></div>
+    <div class="star" style="top: 45%; left: 75%;"></div>
+    <div class="star" style="top: 55%; left: 35%;"></div>
+    <div class="star" style="top: 65%; left: 55%;"></div>
+    <div class="star" style="top: 75%; left: 20%;"></div>
+    <div class="star" style="top: 85%; left: 90%;"></div>
+    <div class="star" style="top: 5%; left: 50%;"></div>
+    <div class="star" style="top: 95%; left: 10%;"></div>
+    <div class="star" style="top: 12%; left: 88%;"></div>
+    <div class="star" style="top: 28%; left: 42%;"></div>
+    
+    <div class="ufo" style="animation-delay: 0s;"></div>
+    <div class="ufo" style="animation-delay: 5s;"></div>
+    <div class="ufo" style="animation-delay: 10s;"></div>
+    
+    <div class="rocket" style="animation-delay: 2s;"></div>
+    <div class="rocket" style="animation-delay: 6s;"></div>
+    <div class="rocket" style="animation-delay: 10s;"></div>
+    
+    <div class="game-container">
+        <div class="game-header">
+            <h1>TETRIS ni Carl</h1>
+            <div class="controls-info">
+                <p>@CREATED BY CARL IVAN KEN SIMBULAN</p>
+            </div>
+        </div>
+        
+        <div class="game-main">
+            <div class="left-panel">
+                <div class="score-panel">
+                    <div class="score-item">
+                        <span class="label">SCORE</span>
+                        <span class="value" id="score">0</span>
+                    </div>
+                    <div class="score-item">
+                        <span class="label">LINES</span>
+                        <span class="value" id="lines">0</span>
+                    </div>
+                    <div class="score-item">
+                        <span class="label">LEVEL</span>
+                        <span class="value" id="level">1</span>
+                    </div>
+                </div>
+                
+                <div class="high-score-panel">
+                    <div class="score-item">
+                        <span class="label">HIGH SCORE</span>
+                        <span class="value" id="highScore">0</span>
+                    </div>
+                    <div class="music-simple">
+                        <div class="music-toggle">
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="musicToggle">
+                                <span class="slider"></span>
+                                <span class="toggle-label">MUSIC</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="game-board">
+                <canvas id="tetris-canvas" width="300" height="600"></canvas>
+                <div class="game-overlay" id="gameOverlay">
+                    <div class="overlay-content">
+                        <h2 id="overlayTitle">GAME OVER</h2>
+                        <p id="overlayMessage">Press SPACE to start</p>
+                        <button id="startButton" class="start-btn">START GAME</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-panel">
+                <div class="next-piece-panel">
+                    <h3>NEXT</h3>
+                    <canvas id="next-piece-canvas" width="120" height="80"></canvas>
+                </div>
+                
+                <div class="stats-panel">
+                    <h3>STATISTICS</h3>
+                    <div class="stat-item">
+                        <span class="stat-label">Time:</span>
+                        <span class="stat-value" id="gameTime">00:00</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Pieces:</span>
+                        <span class="stat-value" id="piecesCount">0</span>
+                    </div>
+                </div>
+                
+                <div class="controls-panel">
+                    <h3>CONTROLS</h3>
+                    <div class="control-item">
+                        <kbd>←</kbd> <kbd>→</kbd> or <kbd>A</kbd> <kbd>D</kbd> Move
+                    </div>
+                    <div class="control-item">
+                        <kbd>↓</kbd> or <kbd>S</kbd> Soft Drop
+                    </div>
+                    <div class="control-item">
+                        <kbd>↑</kbd> or <kbd>W</kbd> Rotate
+                    </div>
+                    <div class="control-item">
+                        <kbd>Space</kbd> Hard Drop
+                    </div>
+                    <div class="control-item">
+                        <kbd>P</kbd> Pause
+                    </div>
+                </div>
+                
+                            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
